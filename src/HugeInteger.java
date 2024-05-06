@@ -13,6 +13,7 @@ public class HugeInteger {
             }
             return digits;
         } else {
+            //Error
             throw new NumberNotInRangeException("Number length must be 40");
         }
     }
