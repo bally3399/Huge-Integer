@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HugeIntegerTest {
+public class HugeIntegerTest {
 
     @Test
     public void testParseWorks(){
@@ -39,37 +39,67 @@ class HugeIntegerTest {
     @Test
     public void testToAdd(){
         HugeInteger hugeInteger = new HugeInteger();
-        int[] array1 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        int[] array2 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        assertEquals(160, hugeInteger.add(array1, array2));
+        HugeInteger hugeInteger2 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger2.parse("2222222222222222222222222222222222222222");
+        assertEquals(160, hugeInteger.add(hugeInteger2));
     }
     @Test
     public void testToSubtract(){
         HugeInteger hugeInteger = new HugeInteger();
-        int[] array1 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        int[] array2 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        assertEquals(0, hugeInteger.subtract(array2, array1));
+        HugeInteger hugeInteger1 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger1.parse("2222222222222222222222222222222222222222");
+        assertEquals(0, hugeInteger.subtract(hugeInteger1));
     }
     @Test
     public void testIsEqualsTo(){
         HugeInteger hugeInteger = new HugeInteger();
-        int[] array1 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        int[] array2 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        assertTrue(hugeInteger.equals(array1, array2));
+        HugeInteger hugeInteger1 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger1.parse("2222222222222222222222222222222222222222");
+        assertTrue(hugeInteger.equals(hugeInteger1));
     }
     @Test
     public void testIsNotEqualsTo(){
         HugeInteger hugeInteger = new HugeInteger();
-        int[] array1 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        int[] array2 = hugeInteger.parse("3222222222222222222222222222223333222223");
-        assertTrue(hugeInteger.isNotEqualsTo(array1, array2));
+        HugeInteger hugeInteger1 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger1.parse("3222222222222222222222222222223333222223");
+        assertTrue(hugeInteger.isNotEqualsTo(hugeInteger1));
     }
     @Test
     public void testIsGreaterThan(){
         HugeInteger hugeInteger = new HugeInteger();
-        int[] array1 = hugeInteger.parse("2222222222222222222222222222222222222222");
-        int[] array2 = hugeInteger.parse("3222222222222222222222222222223333222223");
-        assertTrue(hugeInteger.isGreaterThan(array2, array1));
+        HugeInteger hugeInteger1 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger1.parse("3222222222222222222222222222223333222223");
+        assertTrue(hugeInteger.isGreaterThan(hugeInteger1));
+    }
+
+    @Test
+    public void testLessThan(){
+        HugeInteger hugeInteger = new HugeInteger();
+        HugeInteger hugeInteger1 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger1.parse("3222222222222222222222222222223333222223");
+        assertTrue(hugeInteger.isLessThan(hugeInteger1));
+    }
+    @Test
+    public void testIsGreaterThanOrEqualsTo(){
+        HugeInteger hugeInteger = new HugeInteger();
+        HugeInteger hugeInteger1 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger1.parse("3222222222222222222222222222223333222223");
+        assertTrue(hugeInteger.isGreaterThanOrEqualsTo(hugeInteger1));
+    }
+    @Test
+    public void testIsLessThanOrEqualsTo(){
+        HugeInteger hugeInteger = new HugeInteger();
+        HugeInteger hugeInteger1 = new HugeInteger();
+        hugeInteger.parse("2222222222222222222222222222222222222222");
+        hugeInteger1.parse("3222222222222222222222222222223333222223");
+        assertTrue(hugeInteger.isLessThanOrEqualsTo(hugeInteger1));
     }
 
 

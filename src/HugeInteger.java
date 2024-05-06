@@ -7,8 +7,6 @@ public class HugeInteger {
     public HugeInteger() {}
 
     public int[] parse(String number) {
-//        String regex1 = "((234|\\+234)-?|0)?(70|[8-9][0-1])\\d{8}";
-//        String regex = "(0-9)";
         if (number.length() == 40) {
             for (int count = 0; count < number.length(); count++) {
                 digits[count] = Integer.parseInt(String.valueOf(number.charAt(count)));
@@ -28,33 +26,36 @@ public class HugeInteger {
         return builder.toString();
     }
 
-    public int add(int[] array1, int[] array2) {
+    public int add(HugeInteger number) {
         int sum = 0;
         int sum2 = 0;
-        for (int digit : array1) {
-            sum2 += digit;
+        for (int digit : digits) {
+            sum += digit;
         }
-        for (int digit2 : array2) {
-            sum += digit2;
+        int[] array = parse(String.valueOf(number));
+        for (int digit : array) {
+            sum2 += digit;
         }
         return sum + sum2;
     }
 
-    public int subtract(int[] array2, int[] array1) {
+    public int subtract(HugeInteger number) {
         int subtract = 0;
         int subtract2 = 0;
-        for (int digit : array2) {
-            subtract += digit;
+        for (int digit : digits) {
+            subtract -= digit;
         }
-        for (int digit : array1) {
-            subtract2 += digit;
+        int[] array = parse(String.valueOf(number));
+        for (int digit : array) {
+            subtract2 -= digit;
         }
         return subtract - subtract2;
     }
 
-    public boolean equals(int[] array1, int[] array2) {
-        for (int digit : array1) {
-            for (int digit2 : array2) {
+    public boolean equals(HugeInteger number) {
+        int[] array = parse(String.valueOf(number));
+        for (int digit : digits) {
+            for (int digit2 : array) {
                 if (digit == digit2) {
                     return true;
                 }
@@ -63,10 +64,24 @@ public class HugeInteger {
         return false;
     }
 
-    public boolean isNotEqualsTo(int[] array1, int[] array2) {
-        for (int digit : array1) {
-            for (int digit2 : array2) {
+    public boolean isNotEqualsTo(HugeInteger number) {
+        int[] array = parse(String.valueOf(number));
+        for (int digit : digits) {
+            for (int digit2 : array) {
                 if (digit != digit2) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean isGreaterThan(HugeInteger number) {
+        int[] array = parse(String.valueOf(number));
+        for (int digit : digits) {
+            for (int digit2 : array) {
+                if (digit > digit2) {
                     return true;
                 }
             }
@@ -74,22 +89,39 @@ public class HugeInteger {
         return false;
     }
 
-    public boolean isGreaterThan(int[] array1, int[] array2) {
-        int sum = 0;
-        int sum2 = 0;
-        for (int digit : array1) {
-            sum2 += digit;
+    public boolean isLessThan(HugeInteger number) {
+        int[] array = parse(String.valueOf(number));
+        for (int digit : digits) {
+            for (int digit2 : array) {
+                if (digit < digit2) {
+                    return true;
+                }
+            }
         }
-        for (int digit2 : array2) {
-            sum += digit2;
+        return false;
+    }
+
+    public boolean isGreaterThanOrEqualsTo(HugeInteger number) {
+        int[] array = parse(String.valueOf(number));
+        for (int digit : digits) {
+            for (int digit2 : array) {
+                if (digit >= digit2) {
+                    return true;
+                }
+            }
         }
-       if(sum > sum2){
-           System.out.println(sum);
-           System.out.println(sum2);
-           return true;
-       }
-        System.out.println(sum);
-        System.out.println(sum2);
+        return false;
+    }
+
+    public boolean isLessThanOrEqualsTo(HugeInteger number) {
+        int[] array = parse(String.valueOf(number));
+        for (int digit : digits) {
+            for (int digit2 : array) {
+                if (digit <= digit2) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 }
