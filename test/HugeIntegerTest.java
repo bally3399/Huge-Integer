@@ -1,7 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class HugeIntegerTest {
@@ -23,11 +21,11 @@ public class HugeIntegerTest {
         HugeInteger hugeInteger = new HugeInteger();
         assertThrows(NumberNotInRangeException.class, ()-> hugeInteger.parse("2222222222222222222222222222222222"));
     }
-//    @Test
-//    public void testParseMethodThatThrowsException(){
-//        HugeInteger hugeInteger = new HugeInteger();
-//        assertThrows(NumberNotInRangeException.class, ()-> hugeInteger.parse("222222222222222222222222222222222222222m"));
-//    }
+    @Test
+    public void testParseMethodThatThrowsException(){
+        HugeInteger hugeInteger = new HugeInteger();
+        assertThrows(CheckNumberException.class, () -> hugeInteger.parse("2222222222222222222222222222222222m"));
+    }
     @Test
     public void testMethodToString(){
         HugeInteger hugeInteger = new HugeInteger();
@@ -44,6 +42,9 @@ public class HugeIntegerTest {
         hugeInteger2.parse("2222222222222222222222222222222222222222");
         assertEquals(160, hugeInteger.add(hugeInteger2));
     }
+
+
+
     @Test
     public void testToSubtract(){
         HugeInteger hugeInteger = new HugeInteger();
@@ -52,6 +53,7 @@ public class HugeIntegerTest {
         hugeInteger1.parse("2222222222222222222222222222222222222222");
         assertEquals(0, hugeInteger.subtract(hugeInteger1));
     }
+
     @Test
     public void testIsEqualsTo(){
         HugeInteger hugeInteger = new HugeInteger();
@@ -101,6 +103,4 @@ public class HugeIntegerTest {
         hugeInteger1.parse("3222222222222222222222222222223333222223");
         assertTrue(hugeInteger.isLessThanOrEqualsTo(hugeInteger1));
     }
-
-
 }

@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9c38849-0d73-48f8-ae9a-8ac9b6d6d61c" name="Changes" comment="">
+    <list default="true" id="a9c38849-0d73-48f8-ae9a-8ac9b6d6d61c" name="Changes" comment="hugeInteger">
+      <change afterPath="$PROJECT_DIR$/src/CheckNumberException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HugeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HugeInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/HugeIntegerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/HugeIntegerTest.java" afterDir="false" />
@@ -25,21 +26,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "bally3399"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bally3399&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/bally3399/Huge-Integer.git",
-    "accountId": "eadaa87a-b92b-46c1-a602-24076f443d9f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/bally3399/Huge-Integer.git&quot;,
+    &quot;accountId&quot;: &quot;eadaa87a-b92b-46c1-a602-24076f443d9f&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2g60n23SOhYzy5SRRjkaw19iAvt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,6 +54,7 @@
     "JUnit.HugeIntegerTest.testIsEqualsTo.executor": "Run",
     "JUnit.HugeIntegerTest.testIsGreaterThan.executor": "Run",
     "JUnit.HugeIntegerTest.testIsGreaterThanOrEqualsTo.executor": "Run",
+    "JUnit.HugeIntegerTest.testIsLessThanOrEqualsTo.executor": "Run",
     "JUnit.HugeIntegerTest.testIsNotEqualsTo.executor": "Run",
     "JUnit.HugeIntegerTest.testLessThan.executor": "Run",
     "JUnit.HugeIntegerTest.testMethodToString.executor": "Run",
@@ -60,7 +62,9 @@
     "JUnit.HugeIntegerTest.testParseMethodThatThrowsException.executor": "Run",
     "JUnit.HugeIntegerTest.testParseWorks.executor": "Run",
     "JUnit.HugeIntegerTest.testToAdd.executor": "Run",
+    "JUnit.HugeIntegerTest.testToAdd1.executor": "Run",
     "JUnit.HugeIntegerTest.testToSubtract.executor": "Run",
+    "JUnit.HugeIntegerTest.testToSubtract1.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -106,31 +110,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HugeIntegerTest.testIsGreaterThanOrEqualsTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HugeIntegerTest.testParseMethodThatThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HugeIntegerTest" />
-      <option name="METHOD_NAME" value="testIsGreaterThanOrEqualsTo" />
+      <option name="METHOD_NAME" value="testParseMethodThatThrowsException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HugeIntegerTest.testIsLessThanOrEqualsTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HugeIntegerTest.testToAdd1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HugeIntegerTest" />
-      <option name="METHOD_NAME" value="testIsLessThanOrEqualsTo" />
+      <option name="METHOD_NAME" value="testToAdd1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HugeIntegerTest.testLessThan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HugeIntegerTest.testToSubtract1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HugeIntegerTest" />
-      <option name="METHOD_NAME" value="testLessThan" />
+      <option name="METHOD_NAME" value="testToSubtract1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.HugeIntegerTest" />
+        <item itemvalue="JUnit.HugeIntegerTest.testToSubtract1" />
+        <item itemvalue="JUnit.HugeIntegerTest.testToAdd1" />
+        <item itemvalue="JUnit.HugeIntegerTest.testParseMethodThatThrowsException" />
         <item itemvalue="JUnit.HugeIntegerTest.testIsGreaterThan" />
-        <item itemvalue="JUnit.HugeIntegerTest.testIsLessThanOrEqualsTo" />
-        <item itemvalue="JUnit.HugeIntegerTest.testIsGreaterThanOrEqualsTo" />
-        <item itemvalue="JUnit.HugeIntegerTest.testLessThan" />
       </list>
     </recent_temporary>
   </component>
@@ -162,11 +166,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715002885436</updated>
-      <workItem from="1715002886534" duration="14873000" />
+      <workItem from="1715002886534" duration="22368000" />
+      <workItem from="1715061619999" duration="2962000" />
+      <workItem from="1715064617689" duration="714000" />
     </task>
+    <task id="LOCAL-00001" summary="hugeInteger">
+      <option name="closed" value="true" />
+      <created>1715028297733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715028297733</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hugeInteger" />
+    <option name="LAST_COMMIT_MESSAGE" value="hugeInteger" />
   </component>
 </project>

@@ -1,19 +1,26 @@
-import java.math.BigInteger;
-import java.util.Arrays;
-
 public class HugeInteger {
     int[] digits = new int[40];
-
-    public HugeInteger() {}
+    private boolean isDigit(String number) {
+        for (char digit : number.toCharArray()) {
+            if (!Character.isDigit(digit)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public int[] parse(String number) {
-        if (number.length() == 40) {
-            for (int count = 0; count < number.length(); count++) {
-                digits[count] = Integer.parseInt(String.valueOf(number.charAt(count)));
-            }
-            return digits;
+        if (!isDigit(number)) {
+            throw new CheckNumberException("Not a number");
         } else {
-            throw new NumberNotInRangeException("Number length must be 40");
+            if (number.length() == 40) {
+                for (int count = 0; count < number.length(); count++) {
+                    digits[count] = Integer.parseInt(String.valueOf(number.charAt(count)));
+                }
+                return digits;
+            } else {
+                throw new NumberNotInRangeException("Invalid number");
+            }
         }
     }
 
